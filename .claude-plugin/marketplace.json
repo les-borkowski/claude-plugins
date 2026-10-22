@@ -1,0 +1,24 @@
+{
+  "name": "les-borkowski",
+  "description": "Les Borkowski's Claude Code plugins: expediter (agent workflow) and warden (security scanning).",
+  "owner": {
+    "name": "Les Borkowski"
+  },
+  "plugins": [
+    {
+      "name": "expediter",
+      "source": { "source": "github", "repo": "les-borkowski/claude-expediter" },
+      "description": "An orchestrator that calls feature tickets to role agents and checks every result before it ships — plan on a strong model, build on a cheap one. Stack-neutral; reads project specifics from CLAUDE.md."
+    },
+    {
+      "name": "expediter-handoff",
+      "source": { "source": "git-subdir", "url": "les-borkowski/claude-expediter", "path": "mods/expediter-handoff" },
+      "description": "/handoff writes the expediter resume checkpoint and clears the conversation. Needs the expediter plugin for resume."
+    },
+    {
+      "name": "warden",
+      "source": { "source": "github", "repo": "les-borkowski/claude-warden" },
+      "description": "Security scanning MCP server: pinned scanners, agent triage, finding lifecycle. Needs the warden CLI installed (see its README)."
+    }
+  ]
+}
